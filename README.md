@@ -8,24 +8,24 @@
 
 # 示例
 对文法G[E]构造分析表
->E→E+T | E-T | T
->T→T*F | T/F | F
->F→P^F | P
->P→(E) | i*
+- E→E+T | E-T | T
+- T→T*F | T/F | F
+- F→P^F | P
+- P→(E) | i*
 
 应先构造其拓广文法G[E']，但此程序暂不支持两个字符的非终结符，因此用G[A]代替。
 构造如下：
-> A→E
-> E→E+T
-> E→E-T
-> E→T
-> T→T*F
-> T→T/F
-> T→F
-> F→P^F
-> F→P
-> P→(E)
-> P→i
+- A→E
+- E→E+T
+- E→E-T
+- E→T
+- T→T*F
+- T→T/F
+- T→F
+- F→P^F
+- F→P
+- P→(E)
+- P→i
 
 然后如main.py最上方所示，写入列表中。
 可知开始项目集为`A→·E`，开始符号为`A`
